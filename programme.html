@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programme CMIM 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+      display: flex;
+    }
+    
+    /* Menu latéral */
+    .sidebar {
+      width: 250px;
+      background-color: #003366;
+      color: white;
+      padding: 1.5rem 0;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+    }
+    
+    .sidebar-header {
+      padding: 0 1.5rem 1.5rem;
+      border-bottom: 1px solid #0055a5;
+      margin-bottom: 1rem;
+    }
+    
+    .sidebar h2 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    
+    .day-nav {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .day-nav li {
+      padding: 0.8rem 1.5rem;
+      border-left: 4px solid transparent;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .day-nav li:hover {
+      background-color: #002244;
+    }
+    
+    .day-nav li.active {
+      background-color: #0055a5;
+      border-left: 4px solid white;
+      font-weight: bold;
+    }
+    
+    /* Contenu principal */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+    }
+    
+    .program-day {
+      display: none;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .program-day.active {
+      display: block;
+    }
+    
+    .program-day h2 {
+      color: #003366;
+      border-bottom: 2px solid #0055a5;
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    
+    .schedule {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    
+    .schedule th, .schedule td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    .schedule th {
+      background-color: #0055a5;
+      color: white;
+    }
+    
+    .schedule tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    .session-title {
+      font-weight: bold;
+      color: #003366;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    .presenter {
+      font-style: italic;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+    
+    .back-button {
+      display: inline-block;
+      background-color: #0055a5;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      transition: background-color 0.3s;
+    }
+    
+    .back-button:hover {
+      background-color: #003366;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      
+      .day-nav {
+        display: flex;
+        overflow-x: auto;
+      }
+      
+      .day-nav li {
+        white-space: nowrap;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+      }
+      
+      .day-nav li.active {
+        border-left: none;
+        border-bottom: 4px solid white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Menu latéral -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>Programme CMIM 2025</h2>
+      <p>21-24 Juillet 2025</p>
+    </div>
+    <ul class="day-nav">
+      <li class="active" data-day="day1">Lundi 21 Juillet</li>
+      <li data-day="day2">Mardi 22 Juillet</li>
+      <li data-day="day3">Mercredi 23 Juillet</li>
+      <li data-day="day4">Jeudi 24 Juillet</li>
+    </ul>
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <a href="index.html" class="back-button">← Retour à l'accueil</a>
+    
+    <!-- Jour 1 - Lundi 21 Juillet -->
+    <div id="day1" class="program-day active">
+      <h2>Lundi 21 Juillet 2025</h2>
+      <!--p>Cliquez sur le lien pour télécharger dans le fichier complet et voir les résumés.</p-->
+      
+      <table class="schedule">
+        <tr>
+          <th>Horaire</th>
+          <th>Activité</th>
+        </tr>
+        <tr>
+          <td>08:00–08:45</td>
+          <td>Accueil et mise en place</td>
+        </tr>
+        <tr>
+          <td>09:00–10:00</td>
+          <td>Cérémonie d'ouverture</td>
+        </tr>
+        <tr>
+          <td>10:00–10:30</td>
+          <td>Pause café</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">Conférence plénière</div>
+      <table class="schedule">
+        <tr>
+          <td>10:30–11:30</td>
+          <td>
+            <strong>Mathématiques, Art et Créativité</strong>
+            <div class="presenter">Pr Ouaténi DIALLO - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:30–12:15</td>
+          <td>Remise des prix aux lauréats des olympiades</td>
+        </tr>
+        <tr>
+          <td>12:15–12:30</td>
+          <td>Remise d'attestation de reconnaissance</td>
+        </tr>
+        <tr>
+          <td>12:30–14:00</td>
+          <td>Pause déjeuner</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ1-1 – Éducation et Technologies – Président: Dr Aboubacar BAMBA</div>
+      <table class="schedule">
+        <tr>
+          <td>14:00–14:30</td>
+          <td>
+            <strong>Le Fonctionnement de la Définition Formelle de la Limite et de son Importance</strong>
+            <div class="presenter">Cheick Oumar DOUMBIA - Ecole Normale Supérieure de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>14:30–15:00</td>
+          <td>
+            <strong>Résolution de système intelligent d'intégration pédagogique des Tics</strong>
+            <div class="presenter">Adama Telly DIEPKILE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ1-2 – Ingénierie des Modèles et Innovations Socio-Numériques – Président: Dr Soumana FOMBA</div>
+      <table class="schedule">
+        <tr>
+          <td>15:00–15:30</td>
+          <td>
+            <strong>Formaliser, structurer, automatiser: le modèle conceptuel comme point d'ancrage de l'Ingénierie Dirigée par les Modèles pour la modélisation des socioécosystèmes</strong>
+            <div class="presenter">Tingouro SANOGO - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>15:30–16:00</td>
+          <td>
+            <strong>Application numérique multilingue pour former les paysans à la transformation agroalimentaire</strong>
+            <div class="presenter">Assama GUINDO - Université des Sciences Sociales et de Gestion de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Jour 2 - Mardi 22 Juillet -->
+    <div id="day2" class="program-day">
+      <h2>Mardi 22 Juillet 2025</h2>
+      <!--p>Cliquez sur le lien interne dans le programme ci-dessous pour voir les résumés.</p-->
+      
+      <div class="session-title">MSJ2-1 – Statistique Asymptotique et Analyse des Risques Extrêmes – Président: Pr Ouaténi DIALLO</div>
+      <table class="schedule">
+        <tr>
+          <td>09:00–09:30</td>
+          <td>
+            <strong>Théorie des valeurs extrêmes et mesure du risque de la distribution des grandes pluies à Bamako</strong>
+            <div class="presenter">Moumouni DIALLO - Université des Sciences Sociales et de Gestion de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>09:30–10:00</td>
+          <td>
+            <strong>Théorie Statistique Asymptotique pour les Problèmes d'Échantillons utilisant le Processus Empirique Fonctionnel</strong>
+            <div class="presenter">Abdoulaye CAMARA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>10:00–10:20</td>
+          <td>Pause café</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ2-2 – Statistique et Modélisation en Épidémiologie – Président: Dr Harouna SANGARE</div>
+      <table class="schedule">
+        <tr>
+          <td>10:20–10:50</td>
+          <td>
+            <strong>Estimation des paramètres d'un modèle épidémiologique et prédiction du nombre de cas cumulés</strong>
+            <div class="presenter">Ilimidi YATTARA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>10:50–11:20</td>
+          <td>
+            <strong>Aperçu sur les interactions de la démographie avec épidémiologie et l'actuariat</strong>
+            <div class="presenter">Boubacar Sidiki KOUYATE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ2-3 – Modélisation et Optimisation des Systèmes Complexes – Président: Dr Oumar SOW</div>
+      <table class="schedule">
+        <tr>
+          <td>11:20–11:50</td>
+          <td>
+            <strong>Caractérisation de quelques mesures pour un recouvrement optimal</strong>
+            <div class="presenter">Adama Arouna KONE - Ecole Normale d'Enseignement Technique et Professionnel, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:50–12:20</td>
+          <td>
+            <strong>Étude des systèmes intégrés hétérogènes, de modèle Eulérien macroscopique (continu) au modèle Lagrangien microscopique (discret), dans le trafic routier</strong>
+            <div class="presenter">Balla HAIDARA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>12:20–14:00</td>
+          <td>Pause déjeuner</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ2-4 – Intelligence Artificielle et Science des Données – Président: Dr Oumar Y. MAIGA</div>
+      <table class="schedule">
+        <tr>
+          <td>14:00–14:30</td>
+          <td>
+            <strong>Data synchronization for reliable Digital Twins</strong>
+            <div class="presenter">Mama DIAKITE - Université de Bordeaux, Bordeaux, France</div>
+          </td>
+        </tr>
+        <tr>
+          <td>14:30–15:00</td>
+          <td>
+            <strong>Une approche hybride de ré-échantillonnage avec stacking traitant des datasets déséquilibrés</strong>
+            <div class="presenter">Moussa DIALLO - Ecole Normale Supérieure de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ2-5 – Applications de l'IA: Eaux et Cybersécurité – Président: Dr Demba COULIBALY</div>
+      <table class="schedule">
+        <tr>
+          <td>15:00–15:30</td>
+          <td>
+            <strong>Etude Comparative des Algorithmes de Classification pour la Prédiction de la Qualité des Eaux de Forage</strong>
+            <div class="presenter">Abdoulaye SIDIBE - Ecole Nationale d'ingénieurs Abderhamane Baba Touré, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>15:30–16:00</td>
+          <td>
+            <strong>Une approche de métamodélisation pour soutenir l'ingénierie de la cybersécurité en intégrant l'apprentissage automatique dans la simulation multi-agents</strong>
+            <div class="presenter">Moussa KOITA - Université Alassane Ouattara, Bouaké, Côte d'Ivoire</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Jour 3 - Mercredi 23 Juillet -->
+    <div id="day3" class="program-day">
+      <h2>Mercredi 23 Juillet 2025</h2>
+      <!--p>Cliquez sur le lien interne dans le programme ci-dessous pour voir les résumés.</p-->
+      
+      <div class="session-title">MSJ3-1 – Statistique Asymptotique et Processus Empiriques – Président: Dr Domion DOUYON</div>
+      <table class="schedule">
+        <tr>
+          <td>09:00–09:30</td>
+          <td>
+            <strong>Loi forte des grands nombres pour les variables associées et applications aux processus empiriques</strong>
+            <div class="presenter">Harouna SANGARE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ3-2 – Structures Algébriques et Géométrie Arithmétique – Président: Pr Hamadoun MAIGA</div>
+      <table class="schedule">
+        <tr>
+          <td>09:30–10:00</td>
+          <td>
+            <strong>Towards Computing Canonical Lift of Ordinary Genus 2 Curves</strong>
+            <div class="presenter">Abdoulaye MAIGA - Ecole Normale Supérieure de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>10:00–10:20</td>
+          <td>Pause café</td>
+        </tr>
+        <tr>
+          <td>10:20–10:50</td>
+          <td>
+            <strong>Automorphisms and Antiautomorphisms of Quandles</strong>
+            <div class="presenter">Birama SANGARE - Novosibirsk State University, Novosibirsk 630090, Russia</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ3-3 – Espaces Fonctionnels Avancés – Président: Dr Moumine SANOGO</div>
+      <table class="schedule">
+        <tr>
+          <td>10:50–11:20</td>
+          <td>
+            <strong>Continuity and density properties in BV<sup>p,α</sup> spaces</strong>
+            <div class="presenter">Bacary SAVADOGO - Centre d'Intelligence Artificielle et de Robotique du Mali, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:20–11:50</td>
+          <td>
+            <strong>Dual of the the Two-Variable Exponent Amalgam Spaces L<sup>q(·)</sup>,l<sup>p(·)</sup>(Ω)</strong>
+            <div class="presenter">Sambourou MASSINANKE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ3-4 – Intelligence Artificielle et Langues Nationales – Président: Dr Adama Telly DIEPKILE</div>
+      <table class="schedule">
+        <tr>
+          <td>11:50–12:20</td>
+          <td>
+            <strong>IA Générative en Langues Nationales: Développement d'un Chatbot Multilingue et d'un Système de Traduction Automatique Bambara-Français</strong>
+            <div class="presenter">Malamine DIABIRA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>12:20–14:00</td>
+          <td>Pause déjeuner</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ3-5 – Modélisation et Contrôle Optimal en Épidémiologie – Président: Pr Amadou MAHAMANE</div>
+      <table class="schedule">
+        <tr>
+          <td>14:00–14:30</td>
+          <td>
+            <strong>Fractional Optimal Control Problem Modeling bovine Tuberculosis and Rabies Co-infection</strong>
+            <div class="presenter">Boubacar DIALLO - Pan African University, Nairobi, Kenya</div>
+          </td>
+        </tr>
+        <tr>
+          <td>14:30–15:00</td>
+          <td>
+            <strong>Approche de Modélisation et de Simulation d'une multi-infection à plus de deux maladies</strong>
+            <div class="presenter">Cheick Amadou Tidiani CAMARA - Ecole Normale Supérieure de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>15:00–15:30</td>
+          <td>
+            <strong>Application de la Méthode de l'apprentissage par renforcement multi-agent (MARL) dans les traitements des soins complexes: cas de la tuberculose</strong>
+            <div class="presenter">Bakary KONE - Université des Sciences Sociales et de Gestion de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ3-6 – Structures Discrètes et Théorie des Nombres – Président: Dr Karamoko DIARRA</div>
+      <table class="schedule">
+        <tr>
+          <td>15:30–16:00</td>
+          <td>
+            <strong>Nouvelles Extensions des q-nombres d'Euler</strong>
+            <div class="presenter">Tongobé MOUNKORO - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Jour 4 - Jeudi 24 Juillet -->
+    <div id="day4" class="program-day">
+      <h2>Jeudi 24 Juillet 2025</h2>
+      <!--p>Cliquez sur le lien interne dans le programme ci-dessous pour voir les résumés.</p!-->
+      
+      <div class="session-title">MSJ4-1 – IA et Modélisation Numérique des Écoulements – Président: Dr Moumouni DIALLO</div>
+      <table class="schedule">
+        <tr>
+          <td>09:00–09:30</td>
+          <td>
+            <strong>A Hybrid Numerical and AI-Based Framework for Pollutant Transport in Shallow-Water Flows: Application to the Niger River in Bamako</strong>
+            <div class="presenter">Abdoulaye SAMAKE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>09:30–10:00</td>
+          <td>
+            <strong>Finite volume method using moving grids to solve a Riemann problem</strong>
+            <div class="presenter">Diakalia KONE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>10:00–10:20</td>
+          <td>Pause café</td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ4-2 – Physique Théorique et Modèles de l'Univers – Président: Dr Hamedou DIAKITE</div>
+      <table class="schedule">
+        <tr>
+          <td>10:20–10:50</td>
+          <td>
+            <strong>Physique théorique: Théorie de Gravitation Modifié et Matière Noire</strong>
+            <div class="presenter">Emmanuel KANAMBAYE - Librairie BAHSARL, Hall du Grand Hôté de Bamako-Mali, BP104, Bamako, Mali</div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="session-title">MSJ4-3 – Intelligence et Systèmes Numériques Innovants – Président: Dr Boukaye B. TRAORE</div>
+      <table class="schedule">
+        <tr>
+          <td>10:50–11:10</td>
+          <td>
+            <strong>Les DAO et leurs applications: Cas de SmartGate</strong>
+            <div class="presenter">Salimata OUATTARA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:10–11:30</td>
+          <td>
+            <strong>Modélisation DEVS d'un Système de Détection et de Protection contre les APT: Cas du Virus Regin</strong>
+            <div class="presenter">Haouaou TRAORE - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:30–11:50</td>
+          <td>
+            <strong>Présentation du Projet EIA—Emploi-Intelligence-Afrique</strong>
+            <div class="presenter">Astan TANGARA - Université des Sciences, des Techniques et des Technologies de Bamako, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>11:50–12:10</td>
+          <td>
+            <strong>Reinforcement Learning from Nouhoum Feedback: An RLHF approach to ASR training</strong>
+            <div class="presenter">Yacouba DIARRA - Robots Mali AI4DLab, Bamako, Mali</div>
+          </td>
+        </tr>
+        <tr>
+          <td>12:10–12:40</td>
+          <td>Cérémonie de clôture</td>
+        </tr>
+        <tr>
+          <td>12:40–14:00</td>
+          <td>Déjeuner de clôture</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Navigation entre les jours
+    document.querySelectorAll('.day-nav li').forEach(item => {
+      item.addEventListener('click', function() {
+        // Retirer la classe active de tous les éléments
+        document.querySelectorAll('.day-nav li').forEach(li => li.classList.remove('active'));
+        document.querySelectorAll('.program-day').forEach(day => day.classList.remove('active'));
+        
+        // Ajouter la classe active à l'élément cliqué
+        this.classList.add('active');
+        const dayId = this.getAttribute('data-day');
+        document.getElementById(dayId).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
